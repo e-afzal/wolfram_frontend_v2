@@ -9,10 +9,10 @@ import toast, { Toaster } from "react-hot-toast";
 
 // COMPONENTS
 import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
 import ResultCard from "@/app/components/search/ResultCard";
 import SortResults from "@/app/components/search/SortResults";
 import DropDownItems from "@/app/components/search/DropdownItems";
+import Footer from "@/app/components/Footer";
 
 const SearchPage = () => {
   const dropdownItems = {
