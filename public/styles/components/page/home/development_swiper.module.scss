@@ -1,0 +1,207 @@
+.swiper_container {
+  margin-bottom: 10rem;
+  width: auto;
+  height: 60rem;
+  background-color: #fff;
+  .swiper_slide {
+    cursor: grab;
+    height: 100%;
+    width: 60rem;
+    border-radius: 8.5px;
+    filter: brightness(80%);
+    transition: all 0.7s;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8.5px;
+    }
+
+    .overlay {
+      border-bottom-left-radius: 8.5px;
+      border-bottom-right-radius: 8.5px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 25%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      box-sizing: border-box;
+      padding: 1.5rem 3rem;
+      opacity: 0;
+      transition: opacity 0.85s;
+      > * {
+        transform: translateY(20px);
+        transition: transform 0.85s;
+      }
+      .overlay_flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .overlay_title {
+          margin-bottom: 1rem;
+          font-family: "ANC-Demi";
+          font-weight: 100;
+          font-size: 2.8rem;
+          letter-spacing: 0.3px;
+        }
+        .overlay_price {
+          font-family: "ANC-Demi";
+          font-weight: 100;
+          font-size: 1.8rem;
+          color: #fff;
+        }
+      }
+      .overlay_location {
+        margin-bottom: 3px;
+        font-family: "ANC-Regular";
+        font-weight: 100;
+        font-size: 1.5rem;
+        letter-spacing: 0.3px;
+      }
+      .overlay_units {
+        font-family: "ANC-Regular";
+        font-weight: 100;
+        font-size: 1.5rem;
+        letter-spacing: 0.3px;
+      }
+      a.overlay_link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        font-family: "ANC-Demi";
+        font-weight: 100;
+        font-size: 1.4rem;
+        color: #f1ece9;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    &:hover {
+      filter: brightness(100%);
+      .overlay {
+        opacity: 1;
+        > * {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1024px) {
+  .swiper_container {
+    height: 40rem;
+    .swiper_slide {
+      .overlay {
+        height: 30%;
+        padding: 2rem 0;
+        opacity: 1;
+
+        .overlay_flex {
+          display: block;
+          .overlay_title {
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 0.5rem;
+          }
+          .overlay_price {
+            display: none;
+          }
+        }
+        .overlay_location {
+          display: none;
+        }
+        .overlay_units {
+          display: none;
+        }
+        a.overlay_link {
+          display: block;
+          text-align: center;
+          margin-top: 0.4rem;
+        }
+        > * {
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper_container {
+    height: 38vh;
+    .swiper_slide {
+      flex-shrink: 0;
+      .overlay {
+        /* height: 30%; */
+        padding: 2rem 0;
+        .overlay_location {
+          display: none;
+        }
+        .overlay_units {
+          display: none;
+        }
+        a.overlay_link {
+          display: block;
+          text-align: center;
+          margin-top: 0.4rem;
+        }
+        .overlay_flex {
+          display: block;
+          .overlay_title {
+            margin: 0 auto;
+          }
+
+          .overlay_price {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .swiper_container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .swiper_container {
+    height: 250px;
+    .swiper_slide {
+      width: 55%;
+      .overlay {
+        height: 30%;
+        padding: 2rem 0;
+        .overlay_flex {
+          display: block;
+          .overlay_title {
+            margin: 0 auto;
+          }
+
+          .overlay_price {
+            display: none;
+          }
+        }
+        .overlay_location {
+          display: none;
+        }
+
+        .overlay_units {
+          display: none;
+        }
+        a.overlay_link {
+          display: block;
+          text-align: center;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+}

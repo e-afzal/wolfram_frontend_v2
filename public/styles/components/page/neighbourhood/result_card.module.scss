@@ -1,0 +1,90 @@
+li.grid_card {
+  background-color: #f8f5f0;
+  border-radius: 3px;
+  grid-column: span 4;
+  transition: all 0.5s;
+
+  .card_img {
+    // background: url("/assets/img/1-Homepage/Latest_Listings/Downtown-Dubai-7717.jpeg")
+    //   no-repeat center center / cover;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 29rem;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    filter: brightness(80%);
+    transition: filter 0.5s;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &:hover {
+    .card_img {
+      filter: brightness(100%);
+    }
+  }
+
+  .card_details {
+    padding: 0px 15px 20px 25px;
+    max-width: 100%;
+
+    p {
+      margin-top: 0;
+      font-family: "ANC-Medium";
+    }
+  }
+
+  > h5:nth-child(2) {
+    letter-spacing: 0.8px;
+  }
+  > h5:nth-child(4) {
+    margin-top: 1rem;
+  }
+
+  .flex_features {
+    margin-top: 1.5rem;
+    display: flex;
+
+    .features_bed,
+    .features_bath,
+    .features_area {
+      display: flex;
+      margin-right: 2.5rem;
+
+      > img {
+        margin-right: 1rem;
+        height: 3rem;
+        width: auto;
+      }
+    }
+    .features_area:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1150px) {
+  li.grid_card {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  li.grid_card {
+    width: min(70%, 310px);
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  li.grid_card {
+    min-width: 320px;
+  }
+}

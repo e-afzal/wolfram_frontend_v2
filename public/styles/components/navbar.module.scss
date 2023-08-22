@@ -1,0 +1,136 @@
+nav.nav {
+  background-color: black;
+  height: max-content;
+  .nav_flex {
+    max-width: 1366px;
+    margin-inline: auto;
+    padding-inline: clamp(2rem, 5vw, 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo img {
+      display: inline-block;
+      width: 13.5rem;
+      height: auto;
+    }
+    // DESKTOP NAV MENU
+    .nav_flex_list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      a {
+        color: #3a3a3a;
+        font-family: "5-Gilroy-SemiBold";
+        font-size: 1.6rem;
+        margin-left: 3.5rem;
+        letter-spacing: 0.1rem;
+        li {
+          color: #f1ece9;
+        }
+        > a:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    // MOBILE PHONE NAV MENU
+    .menu_btn {
+      display: none;
+    }
+    // MOBILE MENU OVERLAY
+    #menu_overlay {
+      display: none;
+    }
+  }
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1024px) {
+  nav.nav {
+    .nav_flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .menu_btn {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // position: absolute;
+        // top: 7vh;
+        img {
+          height: auto;
+          width: 3rem;
+        }
+      }
+      a.logo {
+        margin-inline: auto;
+      }
+      ul.nav_flex_list {
+        display: none;
+      }
+
+      /* HAMBURGER MENU below 1024px */
+      /* ONLINE TUTORIALS VIDEO */
+      #menu_overlay {
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #151515;
+        justify-content: center;
+        align-items: flex-start;
+        transition: 0.5s;
+        display: none;
+        ul {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          top: 22.5vh;
+          li {
+            position: relative;
+          }
+          a li {
+            position: relative;
+            /* font-size: 5.6rem; */
+            font-size: clamp(3rem, 7vw, 5rem);
+            padding-inline: 1rem;
+            color: hsl(0, 0%, 100%);
+          }
+        }
+        .close_overlay {
+          position: absolute;
+          top: 4.5vh;
+          right: 8vw;
+          /* font-size: 5rem; */
+          cursor: pointer;
+
+          img {
+            height: 3rem;
+            width: auto;
+            /* width: 20vw; */
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav.nav {
+    .nav_flex .menu_btn img {
+      width: 5.5vw;
+    }
+  }
+}
