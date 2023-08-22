@@ -12,7 +12,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ResultCard from "@/app/components/search/ResultCard";
 import SortResults from "@/app/components/search/SortResults";
-import DropDownItems from "@/app/components/search/DropdownItem";
+import DropDownItems from "@/app/components/search/DropdownItems";
 
 const SearchPage = () => {
   const dropdownItems = {
