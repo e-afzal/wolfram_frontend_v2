@@ -244,7 +244,7 @@ const SearchPage = () => {
 
   return (
     <>
-      <Navbar paddingTop={0} />
+      <Navbar paddingTop="2.5rem" height="10rem" />
 
       {/* TOAST */}
       <Toaster />
@@ -436,7 +436,7 @@ const SearchPage = () => {
           ))}
         </ul>
       </section>
-      <Footer />
+      <Footer marginTop={"5rem"} />
     </>
   );
 };

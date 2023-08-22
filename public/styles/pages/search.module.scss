@@ -1,8 +1,8 @@
 section#filter {
-  /* padding: 3rem 7rem; */
   padding-block: 3rem;
-  padding-inline: 3vw;
-  max-width: 1200px;
+  max-width: 1366px;
+  margin-inline: auto;
+  padding-inline: clamp(2.5rem, 3.5vw, 5rem);
   .form_grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -99,6 +99,9 @@ section#filter {
 }
 
 #results {
+  max-width: 1366px;
+  margin-inline: auto;
+  padding-inline: clamp(2.5rem, 3.5vw, 5rem);
   /* padding: 4rem 7rem; */
   padding-top: 4rem;
   padding-bottom: 0;
@@ -107,14 +110,10 @@ section#filter {
 #results h3 {
   letter-spacing: 0;
   font-weight: 200;
-  max-width: 1200px;
-  padding-inline: 3vw;
 }
 #results .results_flex {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  padding-inline: 3vw;
 }
 #results .results_flex > h5:first-child {
   margin-top: 2rem;
@@ -159,11 +158,9 @@ section#filter {
 }
 #results ul.grid {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
-  gap: 4.5rem 3rem;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 320px));
   justify-content: space-between;
-  padding-inline: 3vw;
+  row-gap: 5rem;
 }
 #results ul.grid li.grid_card {
   background-color: #f8f5f0;
