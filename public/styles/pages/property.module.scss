@@ -1,6 +1,9 @@
 // SECTION: GALLERY
 section#gallery {
-  padding: 5rem 7rem;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-block: 5rem;
+  padding-inline: clamp(2.5rem, 3.5vw, 7rem);
 
   .chevron_box {
     display: flex;
@@ -63,12 +66,15 @@ section#gallery {
 
 // SECTION - DETAILS
 section#details {
-  // margin-top: 10rem;
-  padding: 10rem 7rem;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-block: 10rem;
+  padding-inline: clamp(2.5rem, 3.5vw, 7rem);
 
   ul.grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
 
     .property_details {
       grid-column: 1/8;
@@ -86,7 +92,7 @@ section#details {
     }
     .agent_details {
       grid-column: 10/13;
-      padding: 2rem 0;
+      padding: 2rem 0.7rem;
       border: 2px solid #333;
       text-align: center;
       height: min-content;
@@ -97,8 +103,6 @@ section#details {
         margin: 2rem 0 1rem 0;
         height: 14rem;
         width: 14rem;
-        background: url("/assets/img/2-singlePageTemplate/Agent.jpeg") center
-          center/cover;
         border-radius: 50%;
       }
 
@@ -147,8 +151,9 @@ section#details {
 
 // SECTION - FEATURES
 section#features {
-  // margin-top: 6rem;
-  padding: 0rem 7rem;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-inline: clamp(2.5rem, 3.5vw, 7rem);
 
   p {
     margin-top: 0.5rem;
@@ -161,93 +166,85 @@ section#features {
 
 /* MEDIA QUERY */
 @media (max-width: 950px) {
-  section#gallery .chevron_box {
-    margin-bottom: 2.5rem;
-  }
-  section#gallery .gallery_grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  section#gallery .gallery_grid .gallery {
-    margin-top: 5rem;
+  section#gallery {
+    .chevron_box {
+      margin-bottom: 2.5rem;
+    }
+    .gallery_grid {
+      grid-template-columns: repeat(1, 1fr);
+      .gallery {
+        margin-top: 5rem;
+      }
+    }
   }
 }
 
 @media (max-width: 850px) {
-  #details ul.grid .agent_details {
+  section#details ul.grid .agent_details {
     grid-column: 9/13;
   }
 }
 
 @media (max-width: 650px) {
   section#gallery .gallery_grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    justify-content: center;
+    .gallery {
+      margin-top: 5rem;
+    }
   }
 
-  section#gallery .gallery_grid .gallery {
-    margin-top: 5rem;
-  }
-
-  #details {
+  section#details {
     padding-top: 3rem;
-  }
-
-  #details ul.grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  #details ul.grid .property_details {
-    grid-column: span 1;
-  }
-  #details ul.grid .agent_details {
-    grid-column: span 1;
-    max-width: 50%;
-    min-width: max-content;
-    margin-top: 2rem;
+    ul.grid {
+      grid-template-columns: 1fr;
+      .property_details {
+        grid-column: span 1;
+      }
+      .agent_details {
+        grid-column: span 1;
+        max-width: 50%;
+        min-width: max-content;
+        margin-top: 2rem;
+      }
+    }
   }
 }
 
 @media (max-width: 500px) {
   section#gallery .gallery_grid .brief .brief_grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+  }
+  section#details {
+    padding-block: 0;
+    padding-block: 2.5rem;
   }
 }
 
 @media (max-width: 360px) {
   section#gallery {
     padding-bottom: 0rem;
+    .chevron_box {
+      margin-bottom: 2rem;
+    }
+    .gallery_grid .gallery {
+      margin-block: 3.5rem;
+    }
   }
-  section#gallery .chevron_box {
-    margin-bottom: 2rem;
-  }
-  #thumbs {
-    display: none;
-  }
-  section#gallery .gallery_grid .gallery {
-    margin-block: 3.5rem;
-  }
-  #details ul.grid {
+
+  section#details ul.grid {
     grid-template-columns: repeat(1, 1fr);
-  }
-  #details ul.grid .property_details,
-  #details ul.grid .agent_details {
-    grid-column: span 1;
-  }
-
-  /* section#details {
-      padding: 0 5rem;
-    } */
-
-  #details ul.grid .property_details {
-    margin-bottom: 3.5rem;
-  }
-
-  #details ul.grid .agent_details {
-    width: 65%;
-    margin: 0 auto;
-    margin-bottom: 3.5rem;
-  }
-
-  #features {
-    display: none;
+    .property_details,
+    .agent_details {
+      grid-column: span 1;
+    }
+    .property_details {
+      margin-bottom: 3.5rem;
+    }
+    .agent_details {
+      width: 65%;
+      margin: 0 auto;
+      margin-bottom: 3.5rem;
+    }
   }
 }
