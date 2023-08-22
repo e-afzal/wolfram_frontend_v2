@@ -11,7 +11,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Navbar from "@/app/components/Navbar";
 import ResultCard from "@/app/components/search/ResultCard";
 import SortResults from "@/app/components/search/SortResults";
-import DropDownItems from "@/app/components/search/DropdownItems";
+import DropDownItems from "@/app/components/search/DropDownItems";
 import Footer from "@/app/components/Footer";
 
 const SearchPage = () => {
