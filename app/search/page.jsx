@@ -169,11 +169,12 @@ const SearchPage = () => {
     setSearch(searchTerm.trim());
   };
 
-  // SORT HANDLER
+  //? SORT HANDLER
   const handleSort = (element) => {
     setSort(element);
   };
-  // SORT RESULT
+
+  //? SORT RESULT
   filtered.sort((a, b) => {
     // For "NEWEST", ID for each property should be 1 to whatever.
     if (sort === "Newest") return a.id - b.id;
