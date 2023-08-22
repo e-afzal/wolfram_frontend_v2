@@ -36,7 +36,7 @@ const ProjectTemplate = async ({ params: { id } }) => {
 
   return (
     <>
-      <Navbar paddingTop={0} />
+      <Navbar paddingTop="2.5rem" height="10rem" />
       <section id={styles.carousel}>
         <ProjectSwiper images={carouselImg} />
       </section>

@@ -1,24 +1,21 @@
-section#developer,
-section#project_details {
-  padding: 0 7rem;
+// section#developer,
+// section#project_details {
+//   padding: 0 7rem;
+// }
+
+section#carousel {
+  // margin-top: 5rem;
+  max-width: 1600px;
+  margin-inline: auto;
 }
 
 section#developer {
+  max-width: 1600px;
+  margin-inline: auto;
   padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  padding-inline: clamp(2.5rem, 3.5vw, 5rem);
 
-  .logo {
-    grid-column: span 2;
-    img {
-      width: 100%;
-      height: 110%;
-    }
-  }
   .info {
-    grid-column: span 6;
-    padding-left: 2rem;
-
     h6 {
       font-family: "ANC-Medium";
       font-weight: 100;
@@ -42,7 +39,9 @@ section#developer {
 }
 
 section#project_details {
-  //   border: 1px solid salmon;
+  padding-inline: clamp(2.5rem, 3.5vw, 5rem);
+  max-width: 1600px;
+  margin-inline: auto;
   margin-top: 5rem;
 
   .sticky-flex {
@@ -52,8 +51,6 @@ section#project_details {
     position: sticky;
     top: 0;
     background-color: #fff;
-
-    // justify-content: space-between;
 
     a {
       border: 1px solid #ddd;
@@ -140,10 +137,13 @@ section#project_details {
 
     .amenities_flex {
       display: flex;
-      flex-flow: row wrap;
+      // flex-flow: row wrap;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 3rem;
 
       > p {
-        margin-right: 4rem;
+        // margin-right: 4rem;
       }
     }
   }
@@ -186,14 +186,6 @@ section#project_details {
 }
 
 /* MEDIA QUERY */
-@media screen and (max-width: 1200px) {
-  section#developer {
-    padding-right: 0;
-  }
-  section#project_details {
-    /* padding-right: 4rem; */
-  }
-}
 @media screen and (max-width: 1100px) {
   section#project_details .aboutProject .about_grid {
     grid-template-columns: repeat(1, 1fr);
@@ -209,15 +201,17 @@ section#project_details {
   }
 }
 
-@media screen and (max-width: 1080px) {
-  section#project_details .amenities .amenities_flex {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 845px) {
-  section#project_details .amenities .amenities_flex {
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 700px) {
+  section#project_details {
+    .amenities {
+      .amenities_flex {
+        display: grid;
+        grid-template-columns: 1fr;
+        p {
+          margin-top: 5px;
+        }
+      }
+    }
   }
 }
 
@@ -234,11 +228,5 @@ section#project_details {
   }
   section#project_details {
     padding-inline: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  section#project_details .amenities .amenities_flex {
-    grid-template-columns: 1fr;
   }
 }
