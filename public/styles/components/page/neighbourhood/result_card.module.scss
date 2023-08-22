@@ -1,7 +1,7 @@
 li.grid_card {
   background-color: #f8f5f0;
   border-radius: 3px;
-  grid-column: span 4;
+  // grid-column: span 4;
   transition: all 0.5s;
 
   .card_img {
@@ -66,25 +66,5 @@ li.grid_card {
     .features_area:last-child {
       margin-right: 0;
     }
-  }
-}
-
-/* MEDIA QUERY */
-@media screen and (max-width: 1150px) {
-  li.grid_card {
-    grid-column: span 1;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  li.grid_card {
-    width: min(70%, 310px);
-    margin-inline: auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  li.grid_card {
-    min-width: 320px;
   }
 }

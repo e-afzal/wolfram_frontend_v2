@@ -63,7 +63,7 @@ const Neighbourhood = async ({ params: { keyword } }) => {
 
   return (
     <>
-      <Navbar paddingTop="0" />
+      <Navbar paddingTop="2.5rem" height="10rem" />
       <section id={styles.neighbourhood_page}>
         <h3>{keywordSplit} properties for sale</h3>
 

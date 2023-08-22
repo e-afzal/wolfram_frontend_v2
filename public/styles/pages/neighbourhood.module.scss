@@ -1,14 +1,16 @@
 section#neighbourhood_page {
-  max-width: 1200px;
-  padding: 2rem 1.5rem;
+  max-width: 1366px;
+  padding-top: 2rem;
   margin: 0 auto;
 
   h3 {
     text-transform: capitalize;
     text-align: center;
+    padding-inline: 2.5rem;
   }
 
   .summary_grid {
+    padding-inline: 2.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 3.5rem;
@@ -16,7 +18,6 @@ section#neighbourhood_page {
     align-items: flex-start;
 
     .description {
-      grid-column: span 1;
       max-width: 80%;
 
       p {
@@ -25,9 +26,8 @@ section#neighbourhood_page {
     }
 
     .image {
-      grid-column: span 1;
       img {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
         border-radius: 5px;
       }
@@ -54,49 +54,45 @@ section#neighbourhood_page {
   }
 
   .neighbourhood_grid {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1366px;
+    margin-inline: auto;
     margin-top: 5rem;
+    padding-inline: 2.5rem;
 
     ul.grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 4.5rem 5rem;
-      margin: 0 auto;
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 335px));
+      column-gap: 3.5rem;
+      row-gap: 5rem;
     }
   }
 }
 
 /* MEDIA QUERY */
-@media screen and (max-width: 1150px) {
-  section#neighbourhood_page .neighbourhood_grid ul.grid {
-    grid-template-columns: repeat(2, 320px);
-    justify-content: space-around;
-  }
-}
-@media screen and (max-width: 750px) {
-  section#neighbourhood_page .neighbourhood_grid ul.grid {
-    grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 768px) {
-  section#neighbourhood_page .summary_grid {
-    grid-template-columns: 1fr;
-    margin-top: 2rem;
-  }
-  section#neighbourhood_page .summary_grid .description {
-    max-width: 100%;
-  }
 
-  section#neighbourhood_page .summary_grid .image {
-    margin-top: 2rem;
-    max-width: 100%;
-  }
-  section#neighbourhood_page .summary_grid .image img {
-    max-width: 100%;
-  }
-  section#neighbourhood_page .cta-neighbourhood p {
-    width: 90%;
+@media screen and (max-width: 768px) {
+  section#neighbourhood_page {
+    .summary_grid {
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+      .description {
+        max-width: 100%;
+      }
+      .image {
+        margin-top: 2rem;
+        max-width: 100%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    .cta-neighbourhood p {
+      width: 90%;
+    }
+    section.neighbourhood_grid {
+      ul.grid {
+        justify-content: center;
+      }
+    }
   }
 }
