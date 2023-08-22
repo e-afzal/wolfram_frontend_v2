@@ -1,8 +1,9 @@
 html {
   font-size: 62.5%;
-  display: flex;
-  justify-content: center;
-  background-color: #000;
+  /* display: flex;
+  justify-content: center; */
+  background-color: #fff;
+  /* max-width: 1920px; */
 }
 
 body {

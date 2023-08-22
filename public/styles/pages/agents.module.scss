@@ -1,5 +1,5 @@
 section#team {
-  padding: 3rem 7rem;
+  padding-block: 3rem;
 
   h1 {
     text-align: center;
@@ -16,6 +16,7 @@ section#team {
   }
 
   .team_grid {
+    padding-inline: 2.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
@@ -56,7 +57,7 @@ section#team {
 // MEDIA QUERY
 @media (max-width: 1024px) {
   section#team {
-    .team-grid {
+    .team_grid {
       grid-template-columns: repeat(3, 1fr);
       a.agent_box img {
         opacity: 1;
@@ -83,7 +84,7 @@ section#team {
 
 @media (max-width: 500px) {
   section#team {
-    padding: 3rem 4rem;
+    padding: 3rem 2.5rem;
     .team_grid {
       grid-template-columns: repeat(1, 1fr);
       a.agent_box {
