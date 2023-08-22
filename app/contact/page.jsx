@@ -5,6 +5,7 @@ import styles from "@/public/styles/pages/contact.module.scss";
 
 // COMPONENTS
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   // HANDLERS
@@ -14,7 +15,7 @@ const Contact = () => {
   };
   return (
     <>
-      <Navbar paddingTop={0} />
+      <Navbar />
       <section id={styles.contact}>
         <div className={styles.contact_grid}>
           <div className={styles.contact_details}>
@@ -96,6 +97,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <Footer marginTop={"5rem"} />
     </>
   );
 };

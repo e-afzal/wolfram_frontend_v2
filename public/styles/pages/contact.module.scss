@@ -1,7 +1,10 @@
 section#contact {
-  padding: 2rem 7rem;
+  padding-block: 5rem;
 
   .contact_grid {
+    max-width: 1366px;
+    margin-inline: auto;
+    padding-inline: 2.5rem;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 0 5rem;
@@ -47,7 +50,7 @@ section#contact {
     .contact_form {
       grid-column: span 4;
       background-color: #f5f5f5;
-      padding: 2rem 5rem;
+      padding: 2rem 2.5rem;
 
       h3 {
         font-size: 2.2rem;
@@ -142,12 +145,12 @@ section#contact {
 @media (max-width: 768px) {
   section#contact {
     .contact_grid {
-      grid-template-columns: repeat(1, 1fr);
+      display: block;
       .contact_details {
         grid-column: span 1;
       }
       .contact_form {
-        grid-column: span 1;
+        // grid-column: span 1;
         margin-top: 3rem;
         form input {
           width: 60%;
@@ -157,17 +160,9 @@ section#contact {
   }
 }
 
-@media (max-width: 530px) {
-  section#contact {
-    padding-inline: 3rem;
-  }
-}
-
 @media (max-width: 460px) {
   section#contact {
-    padding-block: 2rem;
     .contact_grid .contact_form {
-      padding-inline: 2.5rem;
       form input,
       form select {
         width: 75%;
@@ -176,9 +171,8 @@ section#contact {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 361px) {
   section#contact {
-    padding: 2rem 3rem;
     .contact_grid {
       grid-template-columns: repeat(1, 1fr);
       .contact_form {

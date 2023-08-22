@@ -14,7 +14,7 @@ import logo from "@/public/images/logo-1x.png";
 
 const Navbar = ({
   bgdColor = "#000",
-  height = "maxContent",
+  height = "10rem",
   paddingTop = "2.5rem",
 }) => {
   // STATE
