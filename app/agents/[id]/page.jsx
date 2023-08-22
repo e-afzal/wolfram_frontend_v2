@@ -6,6 +6,7 @@ import styles from "@/public/styles/pages/agent.module.scss";
 // COMPONENTS
 import Navbar from "@/app/components/Navbar";
 import AgentModal from "@/app/components/agent/AgentModal";
+import Footer from "@/app/components/Footer";
 
 async function getAgent(id) {
   const res = await fetch(
@@ -30,7 +31,7 @@ export default async function Agent({ params: { id } }) {
 
   return (
     <>
-      <Navbar paddingTop={0} />
+      <Navbar paddingTop="2.5rem" height="10rem" />
       <section id={styles.agent}>
         <div className={styles.agent_grid}>
           <div className={styles.agent_snapshot}>
@@ -112,6 +113,7 @@ export default async function Agent({ params: { id } }) {
           </div>
         </div>
       </section>
+      <Footer marginTop={"5rem"} />
     </>
   );
 }
